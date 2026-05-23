@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>For You Duduu 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    overflow-x:hidden;
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#1b0033,#2d004d,#4a005f);
+    min-height:100vh;
+    color:white;
+}
+
+/* Floating Hearts */
+
+.hearts span{
+    position:absolute;
+    bottom:-100px;
+    animation:float 10s linear infinite;
+    color:#ff8fcf;
+    font-size:25px;
+    opacity:.7;
+}
+
+.hearts span:nth-child(1){left:10%;animation-duration:8s;}
+.hearts span:nth-child(2){left:20%;animation-duration:12s;}
+.hearts span:nth-child(3){left:35%;animation-duration:9s;}
+.hearts span:nth-child(4){left:50%;animation-duration:15s;}
+.hearts span:nth-child(5){left:70%;animation-duration:11s;}
+.hearts span:nth-child(6){left:90%;animation-duration:7s;}
+
+@keyframes float{
+    0%{
+        transform:translateY(0) scale(0.5);
+        opacity:0;
+    }
+    50%{
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-120vh) scale(1.3);
+        opacity:0;
+    }
+}
+
+/* Main Container */
+
+.container{
+    width:100%;
+    padding:30px;
+    text-align:center;
+}
+
+/* Title */
+
+.title{
+    margin-top:20px;
+    animation:glow 2s infinite alternate;
+}
+
+.title h1{
+    font-family:'Pacifico',cursive;
+    font-size:75px;
+    color:#ffb3e6;
+    text-shadow:0 0 15px #ff66cc,
+                0 0 30px #ff66cc;
+}
+
+.title p{
+    margin-top:10px;
+    font-size:20px;
+    color:#ffe6f7;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px #ff66cc;
+    }
+    to{
+        text-shadow:0 0 25px #ff99dd,
+                    0 0 40px #ff66cc;
+    }
+}
+
+/* Teddy */
+
+.teddy{
+    margin-top:30px;
+}
+
+.teddy img{
+    width:260px;
+    filter:drop-shadow(0 0 25px pink);
+    animation:bounce 3s infinite;
+}
+
+@keyframes bounce{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+}
+
+/* Start Button */
+
+.start-btn{
+    margin-top:20px;
+}
+
+.start-btn button{
+    padding:18px 45px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(45deg,#ff4da6,#ff99cc);
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    box-shadow:0 10px 30px rgba(255,105,180,.5);
+    transition:.4s;
+}
+
+.start-btn button:hover{
+    transform:scale(1.08);
+}
+
+/* Game Levels */
+
+.levels{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+    margin-top:50px;
+}
+
+.card{
+    width:300px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(15px);
+    border-radius:25px;
+    padding:25px;
+    box-shadow:0 10px 30px rgba(255,192,203,.25);
+    transition:.5s;
+    border:2px solid rgba(255,255,255,.15);
+}
+
+.card:hover{
+    transform:translateY(-10px) rotateY(10deg);
+}
+
+.card h2{
+    color:#ffb3e6;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#ffe6f7;
+    line-height:1.6;
+    font-size:15px;
+}
+
+.card button{
+    margin-top:20px;
+    padding:12px 30px;
+    border:none;
+    border-radius:40px;
+    background:#ff66b3;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.card button:hover{
+    background:#ff3385;
+}
+
+/* Sorry Message */
+
+.sorry-box{
+    margin:60px auto;
+    max-width:800px;
+    background:rgba(255,255,255,.12);
+    padding:40px;
+    border-radius:30px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 0 30px rgba(255,182,193,.4);
+}
+
+.sorry-box h2{
+    font-family:'Pacifico',cursive;
+    color:#ffb3e6;
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.sorry-box p{
+    font-size:19px;
+    line-height:1.9;
+    color:#fff0f7;
+}
+
+/* Final Text */
+
+.final{
+    margin-top:50px;
+    font-family:'Pacifico',cursive;
+    font-size:55px;
+    color:#ffb3e6;
+    text-shadow:0 0 20px #ff66cc;
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.05);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+
+/* Lock Box */
+
+.lock{
+    margin-top:40px;
+    font-size:100px;
+    animation:lockGlow 2s infinite alternate;
+}
+
+@keyframes lockGlow{
+    from{
+        filter:drop-shadow(0 0 10px pink);
+    }
+    to{
+        filter:drop-shadow(0 0 25px hotpink);
+    }
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.title h1{
+    font-size:55px;
+}
+
+.card{
+    width:90%;
+}
+
+.final{
+    font-size:40px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="hearts">
+    <span>💖</span>
+    <span>💕</span>
+    <span>💗</span>
+    <span>💞</span>
+    <span>💓</span>
+    <span>💘</span>
+</div>
+
+<div class="container">
+
+    <!-- TITLE -->
+
+    <div class="title">
+        <h1>For You Duduu 💖</h1>
+        <p>A small game filled with my big love & heartfelt sorry 💕</p>
+    </div>
+
+    <!-- TEDDY -->
+
+    <div class="teddy">
+        <img src="https://i.imgur.com/9Xn4K6L.png">
+    </div>
+
+    <!-- BUTTON -->
+
+    <div class="start-btn">
+        <button onclick="startGame()">💗 Start Love Game 💗</button>
+    </div>
+
+    <!-- LEVELS -->
+
+    <div class="levels">
+
+        <!-- Level 1 -->
+
+        <div class="card">
+            <h2>💖 Level 1</h2>
+            <p>
+                Choose the correct heart that matches my true love for you 💕
+            </p>
+
+            <button onclick="level1()">Start Level 1</button>
+        </div>
+
+        <!-- Level 2 -->
+
+        <div class="card">
+            <h2>🧸 Level 2</h2>
+            <p>
+                Memory Challenge 💗  
+                Remember all our cute moments together 🥺
+            </p>
+
+            <button onclick="level2()">Start Level 2</button>
+        </div>
+
+        <!-- Level 3 -->
+
+        <div class="card">
+            <h2>🧩 Level 3</h2>
+            <p>
+                Complete our love puzzle and unlock the final surprise 💞
+            </p>
+
+            <button onclick="level3()">Start Level 3</button>
+        </div>
+
+    </div>
+
+    <!-- SORRY MESSAGE -->
+
+    <div class="sorry-box">
+
+        <h2>My Heartfelt Sorry 💕</h2>
+
+        <p>
+            I know I hurt you with my words... <br><br>
+
+            That was never my intention.  
+            You have a heart so pure, caring and beautiful 💗<br><br>
+
+            Please forgive me my love...  
+            Give me one chance to make everything beautiful again 🥺<br><br>
+
+            I promise to always respect you, love you,
+            care for you and never hurt you again 💞<br><br>
+
+            Every single day I realize how lucky I am
+            to have you in my life 💖
+        </p>
+
+    </div>
+
+    <!-- LOCK -->
+
+    <div class="lock">
+        🔐
+    </div>
+
+    <!-- FINAL -->
+
+    <div class="final">
+        Love You So Much Duduu 😘💖
+    </div>
+
+</div>
+
+<script>
+
+function startGame(){
+    alert("Welcome My Love 💖 Complete all 3 levels to unlock my heart 🥺");
+}
+
+function level1(){
+    alert("Level 1 Complete 💕 You chose my true love!");
+}
+
+function level2(){
+    alert("Level 2 Complete 🧸 You remembered our cute moments!");
+}
+
+function level3(){
+    alert("Final Level Complete 💖 Surprise Unlocked!\n\nI LOVE YOU SO MUCH DUDUU 😘💞");
+}
+
+</script>
+
+</body>
+</html>
